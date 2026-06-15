@@ -409,7 +409,6 @@ export function rebarMatrix(results: MemberResult[], st: Settings): Matrix {
 /** 거푸집/버림/잡석 집계: 단일 열 */
 export function singleMatrix(
   results: MemberResult[],
-  st: Settings,
   pick: (r: MemberResult) => number,
   colLabel: string,
   wastePct: number

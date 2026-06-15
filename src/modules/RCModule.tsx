@@ -373,9 +373,9 @@ function AnalysisTab({ state, results }: { state: RcState; results: ReturnType<t
 
   const matrix: Matrix = useMemo(() => {
     if (view === "rebar") return rebarMatrix(results, st);
-    if (view === "formwork") return singleMatrix(results, st, (r) => r.formwork, "거푸집", st.waste.formwork);
-    if (view === "lean") return singleMatrix(results, st, (r) => r.lean, "버림", st.waste.concrete);
-    if (view === "rubble") return singleMatrix(results, st, (r) => r.rubble, "잡석", st.waste.rubble);
+    if (view === "formwork") return singleMatrix(results, (r) => r.formwork, "거푸집", st.waste.formwork);
+    if (view === "lean") return singleMatrix(results, (r) => r.lean, "버림", st.waste.concrete);
+    if (view === "rubble") return singleMatrix(results, (r) => r.rubble, "잡석", st.waste.rubble);
     return concreteMatrix(results, st);
   }, [view, results, st]);
 
